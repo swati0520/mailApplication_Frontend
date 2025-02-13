@@ -6,6 +6,7 @@ import { FiCamera } from "react-icons/fi";
 import axios from "axios";
 
 const Sidebar = (props) => {
+  let url = import.meta.env.VITE_DEPLOYEMENT==='production'?import.meta.env.VITE_ENDPOINT:"http://localhost:8081"
   let functions = props.props;
 
   const dispatch = useDispatch();
