@@ -78,7 +78,7 @@ const SendMail = (props) => {
             ref={subjectdRef}
             type="text"
             placeholder="enter a subject"
-            className="px-10 py-3 w-full border-2"
+            className="px-20 py-3 w-full border-2"
           />
         </div>
 
@@ -89,7 +89,7 @@ const SendMail = (props) => {
           <textarea
             ref={bodydRef}
             name=""
-            className="px-10 py-3 w-full border-2 min-h-[58.3vh]"
+            className="px-20 py-3 w-full border-2 min-h-[58.3vh]"
             id=""
           ></textarea>
           <div className="flex gap-2 ">
