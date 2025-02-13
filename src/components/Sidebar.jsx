@@ -33,7 +33,7 @@ const Sidebar = (props) => {
       { profilePic: data.secure_url },
       {
         headers: {
-          Authorization: userSlice.token,
+          'Authorization': userSlice.token,
         },
       }
     );
