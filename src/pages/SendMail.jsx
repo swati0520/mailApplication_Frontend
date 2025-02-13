@@ -65,7 +65,7 @@ const SendMail = (props) => {
             ref={toRef}
             type="email"
             placeholder="enter a email "
-            className="px-20 py-3 w-full border-2"
+            className="px-20z py-3 w-full border-2"
           />
         </div>
 
