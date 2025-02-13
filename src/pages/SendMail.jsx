@@ -4,7 +4,7 @@ import { RiUploadCloud2Line } from "react-icons/ri";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
-import { getSocket } from "../Store/SocketManger";
+import { getSocket } from "../Store/socketManager";
 
 const SendMail = (props) => {
   let url = import.meta.env.VITE_DEPLOYEMENT==='production'?import.meta.env.VITE_ENDPOINT:"http://localhost:8081"

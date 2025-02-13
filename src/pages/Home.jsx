@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { Socket } from "socket.io-client";
-import { getSocket } from "../Store/SocketManger";
+import { getSocket } from "../Store/socketManager";
 
 const Home = (props) => {
 let url = import.meta.env.VITE_DEPLOYEMENT==='production'?import.meta.env.VITE_ENDPOINT:"http://localhost:8081"

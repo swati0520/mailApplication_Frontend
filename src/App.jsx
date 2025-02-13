@@ -11,7 +11,7 @@ import axios from "axios";
 import { logoutUser, updateUser } from "./Store/UserSlice";
 import { Button, Modal } from "antd";
 import Sent from "./pages/Sent";
-import { connectToSoket } from "./Store/SocketManger";
+import { connectToSoket } from "./Store/socketManager";
 
 import ResetPassword from "./pages/ResetPassword";
 
