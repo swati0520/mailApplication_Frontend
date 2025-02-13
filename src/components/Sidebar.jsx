@@ -28,7 +28,7 @@ const Sidebar = (props) => {
     let data = res.data;
 
     let res1 = await axios.put(
-      "http://localhost:8081/users/update",
+      url+"/users/update",
       { profilePic: data.secure_url },
       {
         headers: {
