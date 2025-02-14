@@ -44,8 +44,8 @@ const Sidebar = (props) => {
   };
 
   return (
-    <div className="h-[95vh] pt-12">
-      <aside className="flex flex-col sm:w-64 w-40 h-full px-4 pb-2 overflow-y-auto border-r dark:bg-gray-200 dark:border-gray-700 relative">
+    <div className="h-[95vh] ">
+      <aside className="flex flex-col sm:w-64 w-40 h-full px-4 pb-2 overflow-y-auto border-r pt-12 dark:bg-gray-200 dark:border-gray-700 relative">
         <a href="#" className="mx-auto">
           <h1 className="sm:font-bold text-sm text-center">Mail App</h1>
         </a>
