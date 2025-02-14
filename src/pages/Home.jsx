@@ -42,7 +42,7 @@ let url = import.meta.env.VITE_DEPLOYEMENT==='production'?import.meta.env.VITE_E
   }, [socket?.id, sentMails]);
 
   return (
-    <div className="flex gap-2 md:flex-row  bg-slate-500">
+    <div className="flex gap-2 md:flex-row  ">
       <Sidebar props={propss} />
       <div className="w-full md:w-3/4 flex  flex-col gap-3 p-4 md:p-6 lg:p-8">
         {sentMails
