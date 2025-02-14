@@ -54,7 +54,7 @@ let url = import.meta.env.VITE_DEPLOYEMENT==='production'?import.meta.env.VITE_E
                 className="bg-gray-200 w-full rounded-xl p-4 md:p-6 lg:p-8"
               >
                 <p className="cursor-pointer font-serif text-lg md:text-xl lg:text-2xl">
-                  {mail.to}
+                  {mail.from}
                 </p>
                 <p className="font-serif text-gray-500 text-md md:text-lg lg:text-xl">
                   <span>Subject: </span> {mail.subject}
