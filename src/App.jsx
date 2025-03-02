@@ -17,7 +17,7 @@ import ResetPassword from "./pages/ResetPassword";
 
 
 function App() {
-  let url = import.meta.env.VITE_DEPLOYEMENT==='production'?import.meta.env.VITE_ENDPOINT:"http://localhost:8081"
+  let url = import.meta.env.VITE_DEPLOYEMENT === 'production' ? import.meta.env.VITE_ENDPOINT : "http://localhost:8081"
   const SocketSlice = useSelector((state) => state.socket);
   // console.log(SocketSlice);
 
@@ -41,9 +41,9 @@ function App() {
 
   async function getUser() {
     try {
-      let res = await axios.get(url+`/users/getuser`, {
+      let res = await axios.get(url + `/users/getuser`, {
         headers: {
-         ' Authorization': userStore.token,
+          ' Authorization': userStore.token,
         },
       });
       if (res.status == 200) {
@@ -52,8 +52,8 @@ function App() {
         userInfo.current = res.data.user;
         dispatch(updateUser(res.data.user));
       } else {
-          if(res.response.data.message==='token expired'){
-            // console.log("kuch kaam krna hai");
+        if (res.response.data.message === 'token expired') {
+          // console.log("kuch kaam krna hai");
         }
       }
     } catch (error) {
@@ -81,7 +81,7 @@ function App() {
 
   return (
     <>
-     
+
       <BrowserRouter>
         <Modal
           title="Basic Modal"
@@ -95,7 +95,7 @@ function App() {
           {SocketSlice.isConnected &&
             <Route
               path="/"
-              element={login === true ? <Home  getUser={getUser}/> : <Navigate to="/login" />}
+              element={login === true ? <Home getUser={getUser} /> : <Navigate to="/login" />}
             />
           }
           {!SocketSlice.isConnected && <Route path='/' element={login === true ? <Home /> : <Navigate to='/login' />} />}
@@ -112,27 +112,27 @@ function App() {
           {SocketSlice.isConnected && (
             <Route
               path="/sent"
-              element={login === true ? <Sent  getUser={getUser}/> : <Navigate to="/login" />}
+              element={login === true ? <Sent getUser={getUser} /> : <Navigate to="/login" />}
             />
           )}
 
           {SocketSlice.isConnected && (
             <Route
               path="/sendmail"
-              element={login === true ? <SendMail  getUser={getUser}/> : <Navigate to="/login" />}
+              element={login === true ? <SendMail getUser={getUser} /> : <Navigate to="/login" />}
             />
           )}
 
           <Route
             path="/resetPassword"
-            element={ <ResetPassword /> }
+            element={<ResetPassword />}
           />
 
 
         </Routes>
         <ToastContainer />
       </BrowserRouter>
-     
+
     </>
   );
 }
